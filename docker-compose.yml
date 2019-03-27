@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+  notebook:
+    image: jupyter/datascience-notebook
+    container_name: datalab-ml-training
+    command: [ "/bin/sh", "-c", "start-notebook.sh --NotebookApp.token=''"]
+    # CURRENT_UID=$(id -u):$(id -g) docker-compose up
+    user: ${CURRENT_UID}
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./mount:/home/jovyan:rw

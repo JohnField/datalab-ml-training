@@ -1,3 +1,6 @@
+# docker-compose mount used in tutorial.
+mount/
+
 # Project assets
 iplayer_data_sample_janapr2017.csv
 iplayer_data_sample_janapr2017.csv.zip
